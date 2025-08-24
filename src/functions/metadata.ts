@@ -44,7 +44,7 @@ export const generateMetadata = ({
     publishedTime,
     modifiedTime
 }: MetadataProps = {}): Metadata => {
-    const metadataBase = new URL(process.env.NEXT_PUBLIC_APP_URL);
+    const metadataBase = new URL(process.env.NEXT_PUBLIC_APP_URL || "https://www.devaiconsultants.com");
     const imageUrl = image ? new URL(image, metadataBase).toString() : null;
 
     return {
